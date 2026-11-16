@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Assembles public/index.html and public/favicon.svg from tools/index.tpl.html and the extracted glyph (tools/glyph.json).
 Run: python3 tools/gen.py"""
-import json, html, os
+import json, html, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from services import SERVICES, BY_SLUG
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..", "public") + os.sep
@@ -84,13 +87,55 @@ def case_html(i, c):
 
 cases = "\n\n".join(case_html(i, c) for i, c in enumerate(CASES))
 
+# ---------- landing: service cards link to /services/<slug> ----------
+def card_html(sv):
+    e = html.escape
+    lis = "".join(f"<li>{e(b)}</li>" for b in sv["bullets"])
+    return (f'<article>\n        <p class="mono cap-no">{sv["no"]}</p>\n'
+            f'        <h3><a href="/services/{sv["slug"]}">{e(sv["name"])}</a></h3>\n'
+            f'        <p>{e(sv["card"])}</p>\n'
+            f'        <ul class="mono">{lis}</ul>\n'
+            f'        <span class="mono cap-more" aria-hidden="true">View service</span>\n      </article>')
+
+cards = "\n      ".join(card_html(sv) for sv in SERVICES)
+
 tpl = open(os.path.join(HERE, "index.tpl.html")).read()
-out = tpl.replace("@@G@@", D).replace("@@QA_CELLS@@", qa_cells).replace("@@CASES@@", cases)
+out = tpl.replace("@@G@@", D).replace("@@QA_CELLS@@", qa_cells).replace("@@CASES@@", cases).replace("@@CARDS@@", cards)
 for k, v in UP.items():
     out = out.replace(k, v)
 assert "@@" not in out, "unreplaced placeholder"
 assert "—" not in out, "em dash found"
 open(ROOT + "index.html", "w").write(out)
+
+# ---------- service sub-pages: public/services/<slug>.html (served at /services/<slug>) ----------
+def esc(x): return html.escape(x, quote=True)
+
+def svc_page(sv):
+    tpl = open(os.path.join(HERE, "service.tpl.html")).read()
+    facts = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in sv["facts"])
+    helps = "".join(f'<li><span class="mono">{i + 1:02d}</span><div><h3>{esc(t)}</h3><p>{esc(d)}</p></div></li>' for i, (t, d) in enumerate(sv["helps"]))
+    does = "".join(f'<article><p class="mono cap-no">{i + 1:02d}</p><h3>{esc(t)}</h3><p>{esc(d)}</p></article>' for i, (t, d) in enumerate(sv["does"]))
+    runs = "".join(f'<li><span class="mono">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></li>' for i, (t, d) in enumerate(sv["runs"]))
+    tools = "".join(f"<li>{esc(t)}</li>" for t in sv["tools"])
+    faq = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in sv["faq"])
+    rel = "".join(
+        f'<article><p class="mono cap-no">{BY_SLUG[r]["no"]}</p><h3><a href="/services/{r}">{esc(BY_SLUG[r]["name"])}</a></h3><p>{esc(BY_SLUG[r]["card"])}</p><span class="mono cap-more" aria-hidden="true">View service</span></article>'
+        for r in sv["related"])
+    subj = esc(sv["name"]).replace(" ", "%20")
+    rep = {"@@G@@": D, "@@NAME@@": esc(sv["name"]), "@@META@@": esc(sv["meta"]), "@@SLUG@@": sv["slug"], "@@NO@@": sv["no"],
+           "@@TITLE@@": esc(sv["title"]), "@@LEDE@@": esc(sv["lede"]), "@@FACTS@@": facts, "@@HELPS@@": helps, "@@DOES@@": does,
+           "@@RUNS@@": runs, "@@TOOLS@@": tools, "@@FAQ@@": faq, "@@RELATED@@": rel, "@@MAILSUBJ@@": subj}
+    for k, v in rep.items():
+        tpl = tpl.replace(k, v)
+    assert "@@" not in tpl, "unreplaced placeholder in " + sv["slug"]
+    assert "\u2014" not in tpl, "em dash in " + sv["slug"]
+    return tpl
+
+os.makedirs(ROOT + "services", exist_ok=True)
+for sv in SERVICES:
+    page = svc_page(sv)
+    open(ROOT + "services/" + sv["slug"] + ".html", "w").write(page)
+    print("services/" + sv["slug"] + ".html", len(page), "bytes")
 
 # ---------- favicon: the glyph, light on near-black, accent top stroke via clip ----------
 s = 44 / G["h"]

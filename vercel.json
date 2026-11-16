@@ -41,5 +41,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "permanent": false
+    },
+    {
+      "source": "/services/",
+      "destination": "/#services",
+      "permanent": false
+    }
   ]
 }

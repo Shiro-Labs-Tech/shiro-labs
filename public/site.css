@@ -108,3 +108,42 @@
 
 /* ---------- Contact: keep the email link and the copy button apart ---------- */
 .contact-mail { column-gap: 36px; }
+
+/* ---------- Service cards link to their page ---------- */
+.caps-grid article { position: relative; }
+.caps-grid h3 a { color: inherit; text-decoration: none; }
+.caps-grid h3 a::after { content: ""; position: absolute; inset: 0; }
+.caps-grid h3 a:focus-visible { outline: none; }
+.caps-grid article:has(h3 a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 8px; }
+.cap-more { margin-top: 8px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); transition: color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out); }
+.cap-more::after { content: " \2192"; }
+.caps-grid article:hover h3 { color: var(--accent); }
+.caps-grid article:hover .cap-more { color: var(--accent); transform: translateX(4px); }
+.nav-links a[aria-current="page"]::before { transform: scaleX(1); }
+
+/* ---------- Service sub-pages ---------- */
+.svc-hero { padding: calc(var(--nav-h) + clamp(56px, 9vw, 120px)) var(--margin) 0; max-width: 1500px; margin: 0 auto; display: grid; gap: 22px; }
+.svc-crumb { margin: 0; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.svc-crumb a { color: inherit; text-decoration: none; }
+.svc-crumb a:hover { color: var(--accent); }
+.svc-title { font-family: var(--display); font-weight: 300; font-variation-settings: "opsz" 144; font-size: clamp(40px, 6.6vw, 112px); letter-spacing: -.04em; line-height: .98; max-width: 12em; text-wrap: balance; }
+.svc-name { margin: 0; }
+.svc-lede { max-width: 52ch; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; }
+.svc-hero .cta { margin-top: 6px; }
+.svc-hero .facts { margin-top: 28px; }
+.svc-does h3, .svc-related h3 { font-size: 26px; }
+.svc-does p, .svc-related p { max-width: 40ch; }
+.chips-static { padding: 0; }
+.faq { border-top: var(--stroke) solid var(--rule); }
+.faq details { border-bottom: var(--stroke) solid var(--rule); padding: 18px 0; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: var(--gap); font-size: 20px; font-weight: 500; letter-spacing: -.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--mono); color: var(--accent); flex: none; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { color: var(--muted); max-width: 60ch; margin-top: 10px; }
+.svc-contact { padding-top: clamp(80px, 12vw, 150px); }
+.svc-note { margin: 0; color: var(--muted); }
+.svc-note a { color: var(--ink); }
+@media (max-width: 900px) {
+  .svc-title { font-size: clamp(36px, 10.5vw, 64px); }
+}
