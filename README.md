@@ -23,7 +23,7 @@ Edit the template or `gen.py` (case files live in `gen.py`), run it, commit `pub
 
 ## Replace before launch
 - All five case files and their numbers are labelled Sample (`tools/gen.py` and the tags in `tools/index.tpl.html`). Swap in real engagements.
-- Contact email (`hello@example.com`), social links, services wording and the availability line.
+- Contact email (`hello@shiro-labs.tech`), social links, services wording and the availability line.
 - The page is `noindex` on purpose. When the content is real, remove the `<meta name="robots" content="noindex">` line from `tools/index.tpl.html` and regenerate.
 
 - Service page copy in `tools/services.py` is a draft, including the typical lengths. Edit it to match what you sign. Remove `noindex` in `tools/service.tpl.html` too when launching.
