@@ -16,6 +16,9 @@
     pointer: { x: window.innerWidth / 2, y: window.innerHeight / 2, vx: 0, vy: 0, moved: 0 }
   };
   F.root.classList.add('js');
+  /* Page language comes from <html lang>; the generator writes /id/ pages with lang="id". */
+  F.id = (F.root.lang || 'en').toLowerCase().indexOf('id') === 0;
+  F.t = function (en, id) { return F.id ? id : en; };
   F.$ = function (id) { return document.getElementById(id); };
   F.pad = function (n, len) { var s = String(n); while (s.length < (len || 2)) s = '0' + s; return s; };
   F.clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
@@ -259,7 +262,7 @@
     btn.addEventListener('click', function () {
       var mail = btn.getAttribute('data-email');
       function done(msg) { toast.textContent = msg; toast.classList.add('show'); clearTimeout(timer); timer = setTimeout(function () { toast.classList.remove('show'); }, 1800); }
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(mail).then(function () { done('Copied ' + mail); }, function () { done(mail); });
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(mail).then(function () { done(F.t('Copied ', 'Tersalin ') + mail); }, function () { done(mail); });
       else done(mail);
     });
   });

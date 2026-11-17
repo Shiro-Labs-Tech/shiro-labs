@@ -13,8 +13,8 @@
     btn.addEventListener('click', function () {
       var dark = F.root.getAttribute('data-palette') !== 'ink';
       F.root.setAttribute('data-palette', dark ? 'ink' : 'paper');
-      btn.textContent = dark ? 'Paper' : 'Ink';
-      btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      btn.textContent = dark ? F.t('Paper', 'Terang') : F.t('Ink', 'Gelap');
+      btn.setAttribute('aria-label', dark ? F.t('Switch to light theme', 'Ganti ke tema terang') : F.t('Switch to dark theme', 'Ganti ke tema gelap'));
       if (meta) meta.setAttribute('content', getComputedStyle(F.root).getPropertyValue('--bg').trim());
       window.dispatchEvent(new Event('palettechange'));
     });
@@ -114,11 +114,11 @@
       /* hs is a sorted list of hours; return "HH:00 to HH:00" for the first run */
       var a = hs[0], b = hs[0];
       for (var i = 1; i < hs.length && hs[i] === b + 1; i++) b = hs[i];
-      return F.pad(a) + ':00 to ' + F.pad(b + 1) + ':00';
+      return F.pad(a) + ':00' + F.t(' to ', ' sampai ') + F.pad(b + 1) + ':00';
     }
     function update() {
       var now = new Date(), you = offsetMin(sel.value, now), lab = offsetMin(LAB_TZ, now);
-      if (you === null || lab === null) { out.textContent = 'Working hours are 09:00 to 18:00 WIB (UTC+7).'; return; }
+      if (you === null || lab === null) { out.textContent = F.t('Working hours are 09:00 to 18:00 WIB (UTC+7).', 'Jam kerja kami 09:00 sampai 18:00 WIB (UTC+7).'); return; }
       var delta = (lab - you) / 60, both = [];
       for (var h = 0; h < 24; h++) {
         var a = h >= START && h < END, lh = ((Math.floor(h + delta) % 24) + 24) % 24, b = lh >= START && lh < END;
@@ -126,14 +126,16 @@
         if (a && b) both.push(h);
       }
       out.textContent = both.length
-        ? 'Overlap: ' + both.length + (both.length === 1 ? ' hour' : ' hours') + ', ' + range(both) + ' your time.'
-        : 'No overlap in standard hours. We can work async, or book an early or late call.';
+        ? (F.id ? 'Irisan: ' + both.length + ' jam, ' + range(both) + ' waktu Anda.'
+                : 'Overlap: ' + both.length + (both.length === 1 ? ' hour' : ' hours') + ', ' + range(both) + ' your time.')
+        : F.t('No overlap in standard hours. We can work async, or book an early or late call.',
+              'Tidak ada irisan di jam kerja standar. Kami bisa bekerja secara asinkron, atau menjadwalkan panggilan lebih awal atau lebih malam.');
     }
     try {
       var mine = Intl.DateTimeFormat().resolvedOptions().timeZone, has = false;
       [].forEach.call(sel.options, function (o) { if (o.value === mine) has = true; });
       if (mine && !has && offsetMin(mine, new Date()) !== null) {
-        var opt = document.createElement('option'); opt.value = mine; opt.textContent = 'Your time zone (' + mine.split('/').pop().replace(/_/g, ' ') + ')';
+        var opt = document.createElement('option'); opt.value = mine; opt.textContent = F.t('Your time zone (', 'Zona waktu Anda (') + mine.split('/').pop().replace(/_/g, ' ') + ')';
         sel.insertBefore(opt, sel.firstChild);
       }
       if (mine) [].forEach.call(sel.options, function (o) { if (o.value === mine) sel.value = mine; });

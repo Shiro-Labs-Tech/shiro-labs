@@ -52,6 +52,16 @@
       "source": "/services/",
       "destination": "/#services",
       "permanent": false
+    },
+    {
+      "source": "/id/services",
+      "destination": "/id#services",
+      "permanent": false
+    },
+    {
+      "source": "/id/services/",
+      "destination": "/id#services",
+      "permanent": false
     }
   ]
 }
