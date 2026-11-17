@@ -27,7 +27,7 @@ export function getHead(route: Route): Head {
       locale, ogTitle: title, ogDescription: sv.meta, noindex: NOINDEX };
   }
   if (route.kind === 'demo') {
-    const title = t('Fleet dashboard') + ' | ' + t('Live demo') + ' | Shiro Labs', description = t('A working sample of a dispatcher dashboard: live map, five key numbers, sortable vehicle table and alerts. Sample data only.');
+    const title = 'Shiro Dispatch | ' + t('Live demo') + ' | Shiro Labs', description = t('A working sample of a fleet and dispatch product: live map, order assignment, alerts, maintenance and reports. Invented data only.');
     return { title, description, canonical: SITE + pathFor(route, route.lang), altEn: SITE + pathFor(route, 'en'), altId: SITE + pathFor(route, 'id'),
       locale, ogTitle: title, ogDescription: description, noindex: NOINDEX };
   }

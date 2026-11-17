@@ -38,8 +38,8 @@ export default function CaseFile({ c, i, n }: { c: Case; i: number; n: number })
             {c.id === 'dash' && (
               <div className="case-demo">
                 <p className="mono case-tag">{t('Live demo')}</p>
-                <p>{t('Try a working version with sample data: sort the fleet, click a vehicle, close a road.')}</p>
-                <Link className="pill pill-solid" to={(lang === 'id' ? '/id' : '') + '/demo/fleet'}>{t('Open the live demo')}</Link>
+                <p>{t('Try it as a product, on invented data: assign orders, close a road, break a vehicle down, export a report.')}</p>
+                <Link className="pill pill-solid" to={(lang === 'id' ? '/id' : '') + '/demo/fleet'}>{t('Open Shiro Dispatch')}</Link>
               </div>
             )}
           </div>
