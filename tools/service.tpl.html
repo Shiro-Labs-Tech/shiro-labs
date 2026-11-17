@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-palette="paper">
+<html lang="@@LANG@@" data-palette="paper">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
 <!-- EDIT: remove the noindex line once the copy is final. -->
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#f5f4ef">
-<link rel="canonical" href="https://shiro-labs.tech/services/@@SLUG@@">
+@@HEAD_LINKS@@
 <meta property="og:type" content="website">
 <meta property="og:title" content="@@NAME@@ | Shiro Labs">
 <meta property="og:description" content="@@META@@">
@@ -23,56 +23,57 @@
 <body class="page-service">
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="g" viewBox="0 0 780 939"><path id="g-path" fill-rule="evenodd" pathLength="1" d="@@G@@"/></symbol><clipPath id="tick-clip"><rect x="200" y="-2" width="290" height="216"/></clipPath></svg>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{{Skip to content}}</a>
 
 <header class="nav" id="top">
-  <a class="nav-name" href="/" aria-label="Shiro Labs, home"><svg class="nav-mark" viewBox="0 0 780 939" aria-hidden="true" focusable="false"><use href="#g" class="g-ink"/><use href="#g" class="g-acc" clip-path="url(#tick-clip)"/></svg><span class="mono">Shiro Labs</span></a>
-  <nav class="nav-links" aria-label="Sections">
-    <a href="/#services" data-scramble aria-current="page">Services</a>
-    <a href="/#method" data-scramble>Method</a>
-    <a href="/#work" data-scramble>Cases</a>
-    <a href="/#contact" data-scramble>Contact</a>
+  <a class="nav-name" href="@@HOME@@" aria-label="{{Shiro Labs, home}}"><svg class="nav-mark" viewBox="0 0 780 939" aria-hidden="true" focusable="false"><use href="#g" class="g-ink"/><use href="#g" class="g-acc" clip-path="url(#tick-clip)"/></svg><span class="mono">Shiro Labs</span></a>
+  <nav class="nav-links" aria-label="{{Sections}}">
+    <a href="@@HOME@@#services" data-scramble aria-current="page">{{Services}}</a>
+    <a href="@@HOME@@#method" data-scramble>{{Method}}</a>
+    <a href="@@HOME@@#work" data-scramble>{{Cases}}</a>
+    <a href="@@HOME@@#contact" data-scramble>{{Contact}}</a>
   </nav>
   <div class="nav-right">
     <span class="mono nav-time">WIB <time id="nav-time" datetime="">--:--</time></span>
-    <button class="mono theme-btn" id="theme-btn" type="button" data-magnet aria-label="Switch to dark theme">Ink</button>
+    @@TOGGLE@@
+    <button class="mono theme-btn" id="theme-btn" type="button" data-magnet aria-label="{{Switch to dark theme}}">{{Ink}}</button>
   </div>
   <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 </header>
 
 <main id="main">
   <section class="svc-hero" aria-labelledby="svc-title">
-    <p class="mono svc-crumb"><a href="/">Shiro Labs</a><span aria-hidden="true"> / </span><a href="/#services">Services</a><span aria-hidden="true"> / </span><span>@@NO@@</span></p>
+    <p class="mono svc-crumb"><a href="@@HOME@@">Shiro Labs</a><span aria-hidden="true"> / </span><a href="@@HOME@@#services">{{Services}}</a><span aria-hidden="true"> / </span><span>@@NO@@</span></p>
     <h1 class="svc-title" id="svc-title">@@TITLE@@</h1>
     <p class="svc-name label">@@NAME@@</p>
     <p class="svc-lede">@@LEDE@@</p>
     <p class="cta">
-      <a class="pill pill-solid" href="mailto:hello@shiro-labs.tech?subject=@@MAILSUBJ@@" data-magnet data-scramble>Book a call</a>
-      <a class="pill" href="/#services" data-magnet data-scramble>All services</a>
+      <a class="pill pill-solid" href="mailto:hello@shiro-labs.tech?subject=@@MAILSUBJ@@" data-magnet data-scramble>{{Book a call}}</a>
+      <a class="pill" href="@@HOME@@#services" data-magnet data-scramble>{{All services}}</a>
     </p>
     <dl class="facts mono">@@FACTS@@</dl>
   </section>
 
   <section class="exp" aria-labelledby="helps-label">
     <div class="sec-head">
-      <h2 class="label" id="helps-label">(01) Where this helps</h2>
-      <p class="label">Problems we are usually called for</p>
+      <h2 class="label" id="helps-label">{{(01) Where this helps}}</h2>
+      <p class="label">{{Problems we are usually called for}}</p>
     </div>
     <ol class="exp-list">@@HELPS@@</ol>
   </section>
 
   <section class="caps" aria-labelledby="does-label">
     <div class="sec-head">
-      <h2 class="label" id="does-label">(02) What we do</h2>
-      <p class="label">Pick what applies, skip what does not</p>
+      <h2 class="label" id="does-label">{{(02) What we do}}</h2>
+      <p class="label">{{Pick what applies, skip what does not}}</p>
     </div>
     <div class="caps-grid svc-does">@@DOES@@</div>
   </section>
 
   <section class="method" id="method" aria-labelledby="method-label">
     <div class="sec-head">
-      <h2 class="label" id="method-label">(03) How it runs</h2>
-      <p class="label">Four steps, written down as we go</p>
+      <h2 class="label" id="method-label">{{(03) How it runs}}</h2>
+      <p class="label">{{Four steps, written down as we go}}</p>
     </div>
     <div class="method-rail" aria-hidden="true"><i id="method-fill"></i></div>
     <ol class="method-list" id="method-list">@@RUNS@@</ol>
@@ -80,42 +81,42 @@
 
   <section class="exp" aria-labelledby="tools-label">
     <div class="sec-head">
-      <h2 class="label" id="tools-label">(04) Tools</h2>
-      <p class="label">What we usually reach for</p>
+      <h2 class="label" id="tools-label">{{(04) Tools}}</h2>
+      <p class="label">{{What we usually reach for}}</p>
     </div>
     <ul class="chips chips-static">@@TOOLS@@</ul>
   </section>
 
   <section class="exp" aria-labelledby="faq-label">
     <div class="sec-head">
-      <h2 class="label" id="faq-label">(05) Questions</h2>
-      <p class="label">Short answers</p>
+      <h2 class="label" id="faq-label">{{(05) Questions}}</h2>
+      <p class="label">{{Short answers}}</p>
     </div>
     <div class="faq">@@FAQ@@</div>
   </section>
 
   <section class="caps" aria-labelledby="rel-label">
     <div class="sec-head">
-      <h2 class="label" id="rel-label">(06) Related services</h2>
-      <p class="label"><a href="/#services">All six</a></p>
+      <h2 class="label" id="rel-label">{{(06) Related services}}</h2>
+      <p class="label"><a href="@@HOME@@#services">{{All six}}</a></p>
     </div>
     <div class="caps-grid svc-related">@@RELATED@@</div>
   </section>
 
   <section class="contact svc-contact" id="contact" aria-labelledby="contact-label">
-    <p class="label" id="contact-label">(07) Contact</p>
-    <h2 class="contact-line" id="contact-line">Tell us what you are trying to ship.</h2>
+    <p class="label" id="contact-label">{{(07) Contact}}</p>
+    <h2 class="contact-line" id="contact-line">{{Tell us what you are trying to ship.}}</h2>
     <p class="contact-mail"><a href="mailto:hello@shiro-labs.tech?subject=@@MAILSUBJ@@" data-magnet>hello@shiro-labs.tech</a>
-      <button class="pill copy" id="copy-mail" type="button" data-magnet data-email="hello@shiro-labs.tech">Copy email</button></p>
-    <p class="mono svc-note">Working hours are 09:00 to 18:00 WIB (UTC+7). <a href="/#contact">See the overlap with your time zone</a>.</p>
+      <button class="pill copy" id="copy-mail" type="button" data-magnet data-email="hello@shiro-labs.tech">{{Copy email}}</button></p>
+    <p class="mono svc-note">{{Working hours are 09:00 to 18:00 WIB (UTC+7).}} <a href="@@HOME@@#contact">{{See the overlap with your time zone}}</a>.</p>
   </section>
 </main>
 
 <footer class="foot mono">
   <span>&copy; 2026 Shiro Labs</span>
-  <span>Jakarta time <time id="foot-time" datetime="">--:--</time></span>
-  <a href="/#services">All services</a>
-  <a href="#top">Back to top</a>
+  <span>{{Jakarta time}} <time id="foot-time" datetime="">--:--</time></span>
+  <a href="@@HOME@@#services">{{All services}}</a>
+  <a href="#top">{{Back to top}}</a>
 </footer>
 
 <div class="toast mono" id="toast" role="status" aria-live="polite"></div>

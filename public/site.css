@@ -26,6 +26,12 @@
 .theme-btn { background: none; border: var(--stroke) solid var(--ink); color: var(--ink); padding: 4px 12px; border-radius: 999px; cursor: pointer; text-transform: uppercase; letter-spacing: .06em; transition: background var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out); }
 .theme-btn:hover { background: var(--ink); color: var(--bg); }
 
+/* Language toggle: one pill, the current language filled. A click goes to the same page in the other language. */
+.lang-btn { display: inline-flex; align-items: center; gap: 2px; padding: 2px; border: var(--stroke) solid var(--ink); border-radius: 999px; color: var(--ink); text-decoration: none; text-transform: uppercase; letter-spacing: .06em; line-height: 1; }
+.lang-btn span { padding: 3px 9px; border-radius: 999px; transition: background var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out); }
+.lang-btn span.on { background: var(--ink); color: var(--bg); }
+.lang-btn:hover span:not(.on), .lang-btn:focus-visible span:not(.on) { background: var(--rule); }
+
 /* ---------- Hero ---------- */
 .hero-main { flex: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: calc(var(--gap) * 2); padding: 12px 0; }
 .hero-copy { display: grid; gap: 26px; align-content: center; }

@@ -84,9 +84,10 @@
     function countUp(c) {
       [].forEach.call(c.el.querySelectorAll('[data-count]'), function (el) {
         var to = parseFloat(el.getAttribute('data-count')), dec = parseInt(el.getAttribute('data-dec') || '0', 10), suf = el.getAttribute('data-suffix') || '';
-        if (!F.hasGsap || F.reduce) { el.textContent = to.toFixed(dec) + suf; return; }
+        function fmt(v) { var n = v.toFixed(dec); return (F.id ? n.replace('.', ',') : n) + suf; } /* Indonesian writes 99,4 */
+        if (!F.hasGsap || F.reduce) { el.textContent = fmt(to); return; }
         var o = { v: 0 };
-        gsap.to(o, { v: to, duration: 1.6, ease: 'power3.out', delay: 0.6, onUpdate: function () { el.textContent = o.v.toFixed(dec) + suf; }, onComplete: function () { el.textContent = to.toFixed(dec) + suf; } });
+        gsap.to(o, { v: to, duration: 1.6, ease: 'power3.out', delay: 0.6, onUpdate: function () { el.textContent = fmt(o.v); }, onComplete: function () { el.textContent = fmt(to); } });
       });
     }
 
