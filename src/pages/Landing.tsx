@@ -149,7 +149,7 @@ export default function Landing() {
                 </div></div></div>
               <h3>{t("Fleet dashboard")}</h3>
               <p className="panel-role">{t("An operations screen rebuilt to read at a glance.")}</p>
-              <p className="tags mono"><span className="tag-sample">{t("Sample")}</span><span>React</span><span>TypeScript</span></p>
+              <p className="tags mono"><span className="tag-live">{t("Live demo")}</span><span className="tag-sample">{t("Sample")}</span><span>React</span><span>TypeScript</span></p>
             </a>
 
 

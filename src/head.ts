@@ -13,6 +13,7 @@ export const NOINDEX = true;
 
 const pathFor = (route: Route, lang: 'en' | 'id') => {
   if (route.kind === 'service') return (lang === 'id' ? '/id' : '') + '/services/' + route.slug;
+  if (route.kind === 'demo') return (lang === 'id' ? '/id' : '') + '/demo/' + route.slug;
   return lang === 'id' ? '/id' : '/';
 };
 
@@ -24,6 +25,11 @@ export function getHead(route: Route): Head {
     const title = `${sv.name} | Shiro Labs`;
     return { title, description: sv.meta, canonical: SITE + pathFor(route, route.lang), altEn: SITE + pathFor(route, 'en'), altId: SITE + pathFor(route, 'id'),
       locale, ogTitle: title, ogDescription: sv.meta, noindex: NOINDEX };
+  }
+  if (route.kind === 'demo') {
+    const title = 'Shiro Dispatch | ' + t('Live demo') + ' | Shiro Labs', description = t('A working sample of a fleet and dispatch product: live map, order assignment, alerts, maintenance and reports. Invented data only.');
+    return { title, description, canonical: SITE + pathFor(route, route.lang), altEn: SITE + pathFor(route, 'en'), altId: SITE + pathFor(route, 'id'),
+      locale, ogTitle: title, ogDescription: description, noindex: NOINDEX };
   }
   if (route.kind === 'notfound') {
     return { title: t('Page not found') + ' | Shiro Labs', description: t('This page does not exist.'), canonical: null, altEn: null, altId: null, locale, ogTitle: 'Shiro Labs', ogDescription: t('This page does not exist.'), noindex: NOINDEX };

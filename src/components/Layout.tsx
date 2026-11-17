@@ -10,6 +10,7 @@ import { ToastProvider } from './Toast';
 import Landing from '../pages/Landing';
 import ServicePage from '../pages/ServicePage';
 import NotFound from '../pages/NotFound';
+import FleetDemo from '../pages/FleetDemo';
 import { createPageCtx, introDone, holdIntro, isIntroHeld, rt, ScrollTrigger } from '../folio/runtime';
 import { startCursor, startSmooth, scrollToHash, scrollToY } from '../folio/global';
 import { magnet, scramble, progress, marquee, reveals, method } from '../folio/page';
@@ -30,7 +31,7 @@ function Sprite() {
   );
 }
 
-function Skip({ kind }: { kind: 'home' | 'service' | 'notfound' }) {
+function Skip({ kind }: { kind: 'home' | 'service' | 'demo' | 'notfound' }) {
   const t = useT();
   return kind === 'home'
     ? <a className="skip" href="#work">{t('Skip to case files')}</a>
@@ -151,6 +152,7 @@ export default function Layout() {
           <Fragment key={location.pathname}>
             {route.kind === 'home' && <Landing />}
             {route.kind === 'service' && <ServicePage slug={route.slug} />}
+            {route.kind === 'demo' && <FleetDemo />}
             {route.kind === 'notfound' && <NotFound />}
           </Fragment>
           {tx && <PageTransition key={tx.id} instant={tx.instant}

@@ -23,6 +23,9 @@ Node 22 or newer.
 - `public/`: favicon, robots.txt, `lang.js` (applies a saved language choice before first paint).
 - `vercel.json`: build settings, clean URLs, redirects, security headers (CSP allows only self and Google Fonts, no inline styles).
 
+## Live demo
+`/demo/fleet` (and `/id/demo/fleet`) is Shiro Dispatch, a multi-module fleet and dispatch app (Live, Dispatch, Vehicles, Alerts, Maintenance, Reports, Settings) built on invented data. Engine: `src/demo/fleetSim.ts` (seeded simulation). UI: `src/demo/FleetApp.tsx`, `src/demo/views/`, `src/demo/FleetMap.tsx` (canvas map, includes the 5,000 route stress test), page `src/pages/FleetDemo.tsx`, styles `src/styles/demo.css`. Research and scope: `docs/fleet-product-research.md`. Every user-facing string must be a literal `t('...')` with an Indonesian entry; `npm run i18n` checks this. Everything runs in the browser.
+
 ## Add a service
 Add an entry to `services.en.json` and `services.id.json` (same slug). The route, landing card and prerendered page follow.
 
