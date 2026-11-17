@@ -6,7 +6,8 @@ Static files, no build step. Pushes to `main` deploy to Vercel (project `shiro-l
 
 ## Layout
 - `public/` is what gets served. `public/index.html` is generated, do not hand-edit it.
-- `tools/index.tpl.html` is the page template, `tools/glyph.json` is the outline of the mark, `tools/gen.py` builds `public/index.html` and `public/favicon.svg`.
+- `tools/index.tpl.html` is the page template, `tools/glyph.json` is the outline of the mark, `tools/gen.py` builds `public/index.html`, `public/services/*.html` and `public/favicon.svg`.
+- Services live in `tools/services.py` (one entry each: copy, FAQ, related). `tools/service.tpl.html` is the sub-page template. Each entry becomes `/services/<slug>`, and the landing cards are generated from the same data. To add a service, add an entry and regenerate.
 - `vercel.json` holds the output directory, clean URLs and the security headers (CSP, HSTS and others).
 
 ## Edit and regenerate
@@ -22,8 +23,10 @@ Edit the template or `gen.py` (case files live in `gen.py`), run it, commit `pub
 
 ## Replace before launch
 - All five case files and their numbers are labelled Sample (`tools/gen.py` and the tags in `tools/index.tpl.html`). Swap in real engagements.
-- Contact email (`hello@example.com`), social links, services wording and the availability line.
+- Contact email (`hello@shiro-labs.tech`), social links, services wording and the availability line.
 - The page is `noindex` on purpose. When the content is real, remove the `<meta name="robots" content="noindex">` line from `tools/index.tpl.html` and regenerate.
+
+- Service page copy in `tools/services.py` is a draft, including the typical lengths. Edit it to match what you sign. Remove `noindex` in `tools/service.tpl.html` too when launching.
 
 ## Notes
 - CSP allows only self, cdn.jsdelivr.net (GSAP and Lenis, with SRI) and Google Fonts. No inline style attributes.

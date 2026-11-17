@@ -102,12 +102,40 @@
     var items = [].slice.call(document.querySelectorAll('[data-magnet]')).map(function (el) {
       return { el: el, x: gsap.quickTo(el, 'x', { duration: 0.5, ease: 'power3.out' }), y: gsap.quickTo(el, 'y', { duration: 0.5, ease: 'power3.out' }), on: false };
     });
+    var GAP = 4; /* minimum px kept between two magnetic items */
     window.addEventListener('pointermove', function (e) {
-      items.forEach(function (it) {
-        var r = it.el.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-        var dx = e.clientX - cx, dy = e.clientY - cy, reach = Math.max(r.width, r.height) * 0.75 + 30;
-        if (Math.hypot(dx, dy) < reach) { it.on = true; it.x(dx * 0.32); it.y(dy * 0.32); }
-        else if (it.on) { it.on = false; it.x(0); it.y(0); }
+      /* Rest rectangle (transform removed) and live rectangle for every item. */
+      var rest = items.map(function (it) {
+        var r = it.el.getBoundingClientRect(), x = gsap.getProperty(it.el, 'x') || 0, y = gsap.getProperty(it.el, 'y') || 0;
+        return { l: r.left - x, t: r.top - y, r: r.right - x, b: r.bottom - y, w: r.width, h: r.height, live: r };
+      });
+      /* Only the nearest item in reach follows the cursor, so neighbours never pull toward each other. */
+      var best = -1, bestD = Infinity;
+      rest.forEach(function (q, i) {
+        var d = Math.hypot(e.clientX - (q.l + q.w / 2), e.clientY - (q.t + q.h / 2));
+        if (d < Math.max(q.w, q.h) * 0.75 + 30 && d < bestD) { best = i; bestD = d; }
+      });
+      items.forEach(function (it, i) {
+        if (i !== best) { if (it.on) { it.on = false; it.x(0); it.y(0); } return; }
+        var me = rest[i], dx = (e.clientX - (me.l + me.w / 2)) * 0.32, dy = (e.clientY - (me.t + me.h / 2)) * 0.32;
+        var cap = me.w > 300 ? 14 : 30; /* wide items such as the email link drift only a little */
+        dx = Math.max(-cap, Math.min(cap, dx)); dy = Math.max(-cap, Math.min(cap, dy));
+        var mr = Infinity, ml = Infinity, md = Infinity, mu = Infinity;
+        rest.forEach(function (o, j) {
+          if (j === i) return;
+          var v = o.live; /* where the neighbour is right now */
+          if (v.top < me.b && v.bottom > me.t) { /* shares a row: limit sideways travel */
+            if (v.left >= me.r - 1) mr = Math.min(mr, v.left - me.r - GAP);
+            if (v.right <= me.l + 1) ml = Math.min(ml, me.l - v.right - GAP);
+          }
+          if (v.left < me.r && v.right > me.l) { /* shares a column: limit vertical travel */
+            if (v.top >= me.b - 1) md = Math.min(md, v.top - me.b - GAP);
+            if (v.bottom <= me.t + 1) mu = Math.min(mu, me.t - v.bottom - GAP);
+          }
+        });
+        dx = Math.max(-Math.max(0, ml), Math.min(Math.max(0, mr), dx));
+        dy = Math.max(-Math.max(0, mu), Math.min(Math.max(0, md), dy));
+        it.on = true; it.x(dx); it.y(dy);
       });
     }, { passive: true });
   });
