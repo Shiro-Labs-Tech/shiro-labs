@@ -1,0 +1,705 @@
+[
+ {
+  "slug": "tech-strategy",
+  "no": "A",
+  "name": "Strategi dan konsultasi teknologi",
+  "card": "Rencana berbiaya tentang apa yang dibangun, dibeli, dan dihentikan, dengan urutan yang bisa disetujui pimpinan Anda.",
+  "bullets": [
+   "Roadmap dan anggaran",
+   "Keputusan bangun atau beli",
+   "Pemilihan vendor dan alat"
+  ],
+  "title": "Rencana teknologi yang bisa ditandatangani pimpinan Anda.",
+  "meta": "Strategi dan konsultasi teknologi untuk bisnis yang bertumbuh: roadmap, keputusan bangun atau beli, pemilihan vendor, dan dukungan CTO paruh waktu. Shiro Labs, Jakarta.",
+  "lede": "Kami mengubah tumpukan alat, permintaan, dan opini menjadi satu rencana: apa yang dibangun, dibeli, dan dihentikan, berapa biayanya, dan dalam urutan apa. Tersedia sebagai proyek berlingkup tetap atau sebagai dukungan CTO paruh waktu yang berkelanjutan.",
+  "facts": [
+   [
+    "Durasi umum",
+    "2 sampai 6 minggu, atau retainer bulanan"
+   ],
+   [
+    "Bekerja dengan",
+    "Pendiri dan tim pimpinan"
+   ],
+   [
+    "Jadi milik Anda",
+    "Roadmap, model biaya, dan catatan keputusan"
+   ]
+  ],
+  "helps": [
+   [
+    "Setiap tim membeli alatnya sendiri",
+    "Pengeluaran terus naik, data tersebar di lima tempat, dan tidak ada yang bisa memastikan apa yang benar-benar dipakai."
+   ],
+   [
+    "Keputusan besar bertumpu pada opini satu orang",
+    "Bangun atau beli, vendor mana, platform apa. Perbandingan tertulis yang singkat lebih baik daripada debat panjang."
+   ],
+   [
+    "Tim teknis dan bisnis menginginkan hal berbeda",
+    "Roadmap dalam bahasa yang jelas membuat kedua pihak menimbang biaya, risiko, dan kecepatan dengan fakta yang sama."
+   ],
+   [
+    "Tidak ada pemimpin teknis di tim",
+    "Banyak perusahaan butuh pertimbangan seorang CTO beberapa hari sebulan, bukan perekrutan penuh waktu."
+   ]
+  ],
+  "does": [
+   [
+    "Tinjauan teknologi",
+    "Apa yang Anda jalankan hari ini, siapa yang memakainya, berapa biayanya, dan di mana titik rapuhnya, ditulis dalam satu halaman."
+   ],
+   [
+    "Roadmap dan anggaran",
+    "Rencana berbiaya per kuartal, lengkap dengan penanggung jawab, ketergantungan, dan dampak setiap butir."
+   ],
+   [
+    "Keputusan bangun atau beli",
+    "Pilihan dibandingkan dari sisi biaya, risiko, lock-in, dan kecocokan, disertai rekomendasi dan alasannya."
+   ],
+   [
+    "Pemilihan vendor dan alat",
+    "Kebutuhan, daftar singkat, demo, dan perbandingan bernilai, sehingga pilihan bisa dijelaskan di kemudian hari."
+   ],
+   [
+    "CTO paruh waktu",
+    "Beberapa hari sebulan dengan pertimbangan senior: tinjauan, masukan perekrutan, dan pendapat kedua untuk keputusan besar."
+   ],
+   [
+    "Perekrutan dan desain tim",
+    "Definisi peran, pertanyaan wawancara, dan pandangan tentang apa yang direkrut dan apa yang dikontrakkan."
+   ]
+  ],
+  "runs": [
+   [
+    "Mendengar",
+    "Wawancara dengan orang yang memakai dan menjalankan sistem, ditambah membaca kontrak, tagihan, dan insiden."
+   ],
+   [
+    "Memetakan",
+    "Satu halaman yang menunjukkan sistem, penanggung jawab, biaya, dan risiko, diperiksa bersama Anda."
+   ],
+   [
+    "Memutuskan",
+    "Pilihan dan rekomendasi, dibahas dalam sesi kerja, bukan sekadar dikirim sebagai laporan."
+   ],
+   [
+    "Menindaklanjuti",
+    "Pemeriksaan ulang setelah satu kuartal untuk melihat apa yang sudah berjalan dan menyesuaikan rencana."
+   ]
+  ],
+  "tools": [
+   "Lokakarya",
+   "Model biaya",
+   "Diagram arsitektur",
+   "Catatan keputusan",
+   "Kartu skor vendor"
+  ],
+  "faq": [
+   [
+    "Apakah Anda hanya memberi saran, atau juga membangun?",
+    "Keduanya. Sebagian klien mengambil rencananya dan menjalankannya sendiri, sebagian lain meminta kami mengerjakan sebagian. Rencananya tetap berlaku di kedua kasus."
+   ],
+   [
+    "Apakah harus berlangganan retainer?",
+    "Tidak. Kebanyakan mulai dengan proyek berlingkup tetap. Retainer masuk akal setelah ada roadmap yang perlu dikawal."
+   ],
+   [
+    "Apakah Anda menerima komisi dari vendor?",
+    "Tidak. Hanya Anda yang membayar kami, itulah mengapa perbandingannya bisa apa adanya."
+   ]
+  ],
+  "related": [
+   "custom-software",
+   "cloud-devops",
+   "ai-adoption"
+  ]
+ },
+ {
+  "slug": "custom-software",
+  "no": "B",
+  "name": "Software kustom dan aplikasi web",
+  "card": "Alat internal, portal pelanggan, dan produk web, dibangun bertahap dan mudah dijalankan tim Anda.",
+  "bullets": [
+   "Alat internal dan portal",
+   "Produk web dan MVP",
+   "Design system dan aksesibilitas"
+  ],
+  "title": "Software yang dibangun sesuai cara bisnis Anda sebenarnya bekerja.",
+  "meta": "Software kustom dan aplikasi web untuk bisnis: alat internal, portal pelanggan, dasbor, dan MVP, dibangun cepat dan mudah dirawat. Shiro Labs, Jakarta.",
+  "lede": "Ketika spreadsheet, alat siap pakai, atau rangkaian langkah manual tidak lagi cukup, kami membangun software yang pas: cepat, mudah diakses, dan cukup sederhana untuk tetap dijalankan tim Anda.",
+  "facts": [
+   [
+    "Durasi umum",
+    "6 sampai 12 minggu untuk rilis pertama"
+   ],
+   [
+    "Bekerja dengan",
+    "Tim operasional, produk, dan yang dipimpin pendiri"
+   ],
+   [
+    "Jadi milik Anda",
+    "Kode, infrastruktur, dan dokumentasi"
+   ]
+  ],
+  "helps": [
+   [
+    "Bisnis berjalan di atas spreadsheet",
+    "Berfungsi sampai dua orang menyunting bersamaan, rumus rusak, atau satu-satunya orang yang memahaminya pergi."
+   ],
+   [
+    "Alat siap pakai hampir cocok",
+    "Anda membayar fitur yang tidak dipakai dan tetap mencari jalan memutar untuk fitur yang dibutuhkan."
+   ],
+   [
+    "Ide perlu dibuktikan sebelum pengeluaran besar",
+    "Versi pertama yang kecil tetapi berjalan mengajarkan lebih banyak daripada spesifikasi yang panjang."
+   ],
+   [
+    "Sistem internal lama lambat dan ditakuti",
+    "Tidak ada yang berani mengubahnya, sehingga makin lambat dan makin sulit dipakai."
+   ]
+  ],
+  "does": [
+   [
+    "Alat internal dan portal",
+    "Dasbor, alur persetujuan, dan layar admin yang menggantikan spreadsheet dan rantai email."
+   ],
+   [
+    "Aplikasi web untuk pelanggan",
+    "Halaman reservasi, pemesanan, akun, dan layanan mandiri yang tetap cepat di ponsel kelas menengah."
+   ],
+   [
+    "MVP dan prototipe",
+    "Rilis pertama yang sempit tetapi berjalan, untuk menguji ide dengan pengguna nyata sebelum dana lebih banyak dikeluarkan."
+   ],
+   [
+    "Design system",
+    "Sekumpulan kecil komponen yang konsisten, sehingga layar baru cepat dibuat dan terlihat seperti satu produk."
+   ],
+   [
+    "Aksesibilitas dan performa",
+    "Pemeriksaan keyboard, pembaca layar, dan kecepatan dibangun sejak awal, bukan ditambahkan di akhir."
+   ],
+   [
+    "Modernisasi alat lama",
+    "Mengganti sistem lama yang ditakuti secara bertahap, tanpa peralihan sekaligus yang berisiko."
+   ]
+  ],
+  "runs": [
+   [
+    "Memahami",
+    "Kami mengamati orang bekerja dan menuliskan lima tugas yang paling penting."
+   ],
+   [
+    "Prototipe",
+    "Layar yang bisa diklik dalam hitungan hari, sehingga bentuknya didiskusikan sebelum kode ada."
+   ],
+   [
+    "Membangun",
+    "Rilis mingguan ke lingkungan nyata. Anda melihat kemajuan sebagai software yang berjalan."
+   ],
+   [
+    "Serah terima",
+    "Dokumentasi, penjelasan langsung, dan opsi dukungan berkelanjutan."
+   ]
+  ],
+  "tools": [
+   "TypeScript",
+   "React",
+   "Node",
+   "Rust",
+   "Postgres",
+   "Docker",
+   "Figma"
+  ],
+  "faq": [
+   [
+    "Siapa pemilik kodenya?",
+    "Anda. Repositori ada di akun Anda sejak hari pertama."
+   ],
+   [
+    "Bisakah bekerja bersama developer kami yang ada?",
+    "Bisa. Kami berpasangan dengan mereka dan mengikuti konvensi Anda, atau menyiapkan yang sederhana jika belum ada."
+   ],
+   [
+    "Bagaimana dengan pemeliharaan setelah peluncuran?",
+    "Kami menawarkan paket dukungan bulanan yang ringan, atau serah terima penuh. Keduanya tidak mengunci Anda pada kami."
+   ]
+  ],
+  "related": [
+   "integration-automation",
+   "quality-and-audits",
+   "cloud-devops"
+  ]
+ },
+ {
+  "slug": "integration-automation",
+  "no": "C",
+  "name": "Integrasi sistem dan otomatisasi",
+  "card": "Hubungkan ERP, CRM, toko online, dan alat keuangan Anda agar data berpindah sendiri dan tidak perlu diketik ulang.",
+  "bullets": [
+   "Integrasi ERP dan CRM",
+   "Otomatisasi alur kerja",
+   "Pelaporan dan pipeline data"
+  ],
+  "title": "Sistem Anda, saling berbicara.",
+  "meta": "Integrasi sistem dan otomatisasi: hubungkan ERP, CRM, e-commerce, dan alat keuangan, otomatiskan pekerjaan berulang, dan bangun pelaporan yang andal. Shiro Labs, Jakarta.",
+  "lede": "Kebanyakan bisnis berjalan di atas beberapa alat yang datanya tidak selaras. Kami menghubungkannya, mengotomatiskan langkah yang berulang, dan membuat pengecualian terlihat, sehingga orang menghabiskan waktu untuk mengambil keputusan, bukan menyalin data.",
+  "facts": [
+   [
+    "Durasi umum",
+    "4 sampai 10 minggu"
+   ],
+   [
+    "Bekerja dengan",
+    "Tim operasional dan keuangan"
+   ],
+   [
+    "Jadi milik Anda",
+    "Kode integrasi, runbook, dan peta data"
+   ]
+  ],
+  "helps": [
+   [
+    "Data yang sama diketik dua kali",
+    "Pesanan, pelanggan, dan faktur disalin antar alat secara manual. Lambat, dan setiap salinan berpeluang salah."
+   ],
+   [
+    "Tutup buku bulanan memakan seminggu",
+    "Tim keuangan menghabiskan berhari-hari mencari di mana dua sistem berbeda, bukan menganalisis angkanya."
+   ],
+   [
+    "Laporan berasal dari spreadsheet seseorang",
+    "Angkanya bergantung pada ekspor manual yang hanya satu orang tahu cara menjalankannya."
+   ],
+   [
+    "Ada alat baru dan tidak ada yang terhubung dengannya",
+    "Setiap sistem tambahan membuat data makin sulit dipercaya kecuali disambungkan dengan sengaja."
+   ]
+  ],
+  "does": [
+   [
+    "Pemetaan data dan proses",
+    "Diagram tentang bagaimana informasi benar-benar mengalir hari ini, dan sistem mana yang memegang setiap catatan."
+   ],
+   [
+    "Integrasi ERP, CRM, dan keuangan",
+    "Koneksi andal antar alat yang sudah Anda bayar, memakai API dan webhook-nya."
+   ],
+   [
+    "Otomatisasi alur kerja",
+    "Persetujuan, notifikasi, dan tugas rutin yang berjalan sendiri, dengan orang yang menangani pengecualian."
+   ],
+   [
+    "Pipeline data dan pelaporan",
+    "Satu tempat tepercaya untuk angka, dengan dasbor yang diperbarui tanpa ada yang mengekspor file."
+   ],
+   [
+    "Penanganan error dan pemantauan",
+    "Percobaan ulang, log, dan daftar harian dari semua yang gagal, sehingga tidak ada yang rusak diam-diam."
+   ],
+   [
+    "Migrasi dan pembersihan",
+    "Memindahkan data antar sistem dengan pemeriksaan, sekaligus memperbaiki duplikat dan celah."
+   ]
+  ],
+  "runs": [
+   [
+    "Memetakan",
+    "Kami menelusuri satu catatan, misalnya pesanan, melewati setiap sistem dan mencatat di mana ia disalin."
+   ],
+   [
+    "Memilih",
+    "Satu sumber kebenaran untuk setiap catatan, dan integrasi paling sederhana yang menjaganya tetap begitu."
+   ],
+   [
+    "Menghubungkan",
+    "Dibangun per bagian, masing-masing berjalan dengan data nyata sebelum yang berikutnya dimulai."
+   ],
+   [
+    "Mengawasi",
+    "Peringatan dan daftar pengecualian harian, lalu tinjauan setelah tutup buku bulan pertama."
+   ]
+  ],
+  "tools": [
+   "REST dan webhook",
+   "Node",
+   "Python",
+   "Postgres",
+   "SQL",
+   "Alat low-code"
+  ],
+  "faq": [
+   [
+    "Apakah Anda bisa bekerja dengan ERP kami?",
+    "Kemungkinan besar bisa. Jika ERP itu punya API atau database yang bisa kami jangkau, kami bisa menghubungkannya. Kami memeriksanya di minggu pertama."
+   ],
+   [
+    "Low-code atau kode kustom?",
+    "Low-code untuk alur sederhana berisiko rendah, dan kode kustom saat keandalan atau volume penting. Kami jelaskan untung ruginya."
+   ],
+   [
+    "Apa yang terjadi jika sinkronisasi gagal?",
+    "Sistem mencoba ulang, lalu menaruhnya di daftar pengecualian yang ditinjau seseorang. Tidak ada yang gagal diam-diam."
+   ]
+  ],
+  "related": [
+   "custom-software",
+   "ai-adoption",
+   "tech-strategy"
+  ]
+ },
+ {
+  "slug": "cloud-devops",
+  "no": "D",
+  "name": "Cloud, DevOps, dan keandalan",
+  "card": "Hosting, pipeline, dan pemantauan yang lebih murah, lebih jarang gagal, dan memungkinkan rilis di hari kerja mana pun.",
+  "bullets": [
+   "Setup dan migrasi cloud",
+   "CI/CD dan rilis",
+   "Pemantauan dan kontrol biaya"
+  ],
+  "title": "Infrastruktur yang tetap menyala dan tetap terjangkau.",
+  "meta": "Cloud, DevOps, dan keandalan: setup dan migrasi cloud, pipeline CI/CD, pemantauan, backup, dan kontrol biaya. Shiro Labs, Jakarta.",
+  "lede": "Kami menyiapkan dan merapikan hosting, pipeline, dan pemantauan di balik produk Anda, sehingga rilis menjadi rutinitas, gangguan terdeteksi dalam hitungan menit, dan tagihan cloud masuk akal.",
+  "facts": [
+   [
+    "Durasi umum",
+    "2 sampai 8 minggu"
+   ],
+   [
+    "Bekerja dengan",
+    "Tim di AWS, GCP, Azure, atau VPS"
+   ],
+   [
+    "Jadi milik Anda",
+    "Kode infrastruktur, runbook, dasbor"
+   ]
+  ],
+  "helps": [
+   [
+    "Rilis selalu menegangkan",
+    "Daftar periksa, pembekuan hari Jumat, dan satu orang yang tahu langkahnya. Kami mengubah ritual itu menjadi pipeline."
+   ],
+   [
+    "Pelanggan tahu ada gangguan sebelum Anda",
+    "Tanpa pemeriksaan dan peringatan, laporan pertama datang dari orang yang dirugikan."
+   ],
+   [
+    "Tagihan cloud terus naik",
+    "Server terlalu besar, sumber daya terlupakan, dan tanpa tagging. Kebanyakan tagihan menyimpan penghematan yang mudah."
+   ],
+   [
+    "Setup hanya ada di kepala seseorang",
+    "Server yang dikonfigurasi manual sulit diulang dan lebih sulit dipulihkan."
+   ]
+  ],
+  "does": [
+   [
+    "Setup dan migrasi cloud",
+    "Struktur akun yang masuk akal, lingkungan terpisah, dan rencana migrasi dengan rollback."
+   ],
+   [
+    "Pipeline CI/CD",
+    "Build cepat, pengujian selektif, serta deploy dan rollback satu langkah."
+   ],
+   [
+    "Infrastructure as code",
+    "Setup Anda ditulis sebagai kode, sehingga bisa ditinjau, diulang, dan dipulihkan."
+   ],
+   [
+    "Pemantauan dan peringatan",
+    "Pemeriksaan atas apa yang dirasakan pelanggan, peringatan yang memanggil orang yang tepat, dan halaman status publik."
+   ],
+   [
+    "Backup dan pemulihan",
+    "Backup yang diuji dengan benar-benar memulihkannya, dan rencana tertulis untuk hari buruk."
+   ],
+   [
+    "Tinjauan biaya",
+    "Ke mana uang pergi, apa yang dimatikan atau diperkecil, dan peringatan sebelum tagihan mengejutkan Anda."
+   ]
+  ],
+  "runs": [
+   [
+    "Inventarisasi",
+    "Kami mendata apa yang berjalan, berapa biayanya, dan bagaimana deploy-nya hari ini. Belum ada perubahan."
+   ],
+   [
+    "Stabilkan",
+    "Menutup celah paling berisiko lebih dulu: backup, peringatan, dan langkah rilis manual."
+   ],
+   [
+    "Otomatiskan",
+    "Pipeline dan kode infrastruktur menggantikan langkah manual, satu per satu."
+   ],
+   [
+    "Serah terima",
+    "Runbook, dasbor, dan penjelasan langsung untuk siapa pun yang berjaga."
+   ]
+  ],
+  "tools": [
+   "AWS",
+   "Terraform",
+   "Docker",
+   "GitHub Actions",
+   "Grafana",
+   "Linux",
+   "Postgres"
+  ],
+  "faq": [
+   [
+    "Cloud mana yang Anda tangani?",
+    "Terutama AWS, dan terbiasa dengan GCP, Azure, atau hosting VPS biasa. Kami merekomendasikan yang sesuai dengan skala Anda, bukan yang sedang tren."
+   ],
+   [
+    "Apakah Anda menyediakan layanan on-call?",
+    "Tidak secara bawaan. Kami menyiapkan sistem agar tim Anda bisa berjaga, dan paket dukungan bisa dibahas terpisah."
+   ],
+   [
+    "Apakah migrasi menyebabkan downtime?",
+    "Kami merencanakan migrasi dengan gladi dan rollback serta menargetkan tanpa downtime yang terlihat, meski beberapa peralihan butuh jeda singkat."
+   ]
+  ],
+  "related": [
+   "quality-and-audits",
+   "tech-strategy",
+   "custom-software"
+  ]
+ },
+ {
+  "slug": "ai-adoption",
+  "no": "E",
+  "name": "Adopsi AI dan otomatisasi",
+  "card": "Temukan di mana AI benar-benar menghemat waktu di bisnis Anda, bangun dengan manusia dalam prosesnya, dan ukur hasilnya.",
+  "bullets": [
+   "Pemilihan kasus penggunaan",
+   "Asisten dan agen dengan peninjauan",
+   "Evaluasi dan pemantauan"
+  ],
+  "title": "AI di tempat yang membuatnya balik modal, dan hanya di sana.",
+  "meta": "Adopsi AI dan otomatisasi: pilih kasus penggunaan yang tepat, bangun asisten dan agen dengan peninjauan manusia, dan ukur hasilnya. Shiro Labs, Jakarta.",
+  "lede": "Kebanyakan proyek AI gagal karena salah memilih masalah atau kurang dipercaya, bukan karena teknologinya. Kami membantu Anda memilih beberapa tugas yang benar-benar menghemat waktu, membangunnya dengan langkah peninjauan, dan mengukur apakah berhasil.",
+  "facts": [
+   [
+    "Durasi umum",
+    "3 sampai 8 minggu untuk pilot"
+   ],
+   [
+    "Bekerja dengan",
+    "Tim dengan tugas berulang yang banyak teks"
+   ],
+   [
+    "Jadi milik Anda",
+    "Prompt, set evaluasi, dan alur kerja"
+   ]
+  ],
+  "helps": [
+   [
+    "Semua orang ingin AI tetapi tidak tahu di mana",
+    "Daftar singkat yang diurutkan menurut nilai, risiko, dan upaya lebih baik daripada eksperimen yang tersebar."
+   ],
+   [
+    "Pilot chatbot mempermalukan tim",
+    "Sistem yang mengarang jawaban cepat kehilangan kepercayaan. Pagar pengaman dan peninjauan menjaganya tetap berguna."
+   ],
+   [
+    "Staf sudah menempelkan data perusahaan ke alat chat",
+    "Tanpa cara resmi memakai AI, orang memakai cara mereka sendiri, dengan data Anda."
+   ],
+   [
+    "Tidak ada yang bisa memastikan apakah berhasil",
+    "Tanpa set uji berisi contoh nyata, setiap perubahan hanya tebakan."
+   ]
+  ],
+  "does": [
+   [
+    "Penemuan kasus penggunaan",
+    "Kami mendaftar kandidat tugas dan mengurutkannya menurut waktu yang dihemat, risiko, dan kemudahan memeriksa hasilnya."
+   ],
+   [
+    "Asisten dengan peninjauan",
+    "Menyusun balasan, ringkasan, dan laporan, dengan orang yang menyetujui apa pun yang keluar dari perusahaan."
+   ],
+   [
+    "Otomatisasi alur kerja dan agen",
+    "Tugas bertahap seperti triase, input data, dan perutean, dengan batasan atas apa yang boleh dilakukan agen."
+   ],
+   [
+    "Set evaluasi",
+    "Contoh nyata dengan jawaban yang benar, sehingga setiap prompt, model, atau perubahan diberi skor."
+   ],
+   [
+    "Keamanan dan kebijakan data",
+    "Data apa yang boleh dikirim ke model mana, di mana disimpan, dan bagaimana penyalahgunaan terdeteksi."
+   ],
+   [
+    "Pemantauan dan biaya",
+    "Kualitas dan pengeluaran dipantau setelah peluncuran, dengan peringatan saat salah satunya menyimpang."
+   ]
+  ],
+  "runs": [
+   [
+    "Memilih",
+    "Satu tugas dengan nilai yang jelas dan cara memeriksa hasilnya."
+   ],
+   [
+    "Pilot",
+    "Versi sempit dengan persetujuan manusia, berjalan pada pekerjaan nyata."
+   ],
+   [
+    "Mengukur",
+    "Akurasi, waktu yang dihemat, dan biaya per tugas, dilaporkan apa adanya, termasuk kegagalannya."
+   ],
+   [
+    "Memutuskan",
+    "Perluas, sesuaikan, atau hentikan, berdasarkan angkanya."
+   ]
+  ],
+  "tools": [
+   "API LLM",
+   "MCP",
+   "Python",
+   "TypeScript",
+   "Postgres",
+   "Set evaluasi"
+  ],
+  "faq": [
+   [
+    "Model apa yang Anda pakai?",
+    "Kami tidak terikat pada satu model dan memilih berdasarkan akurasi, biaya, dan kebijakan data Anda."
+   ],
+   [
+    "Apakah data kami aman?",
+    "Kami menyepakati kebijakan data sebelum pilot dan memakai penyedia serta pengaturan yang sesuai. Data sensitif bisa tetap berada di lingkungan Anda sendiri."
+   ],
+   [
+    "Apakah Anda membuat chatbot?",
+    "Kadang, tetapi biasanya kami mulai dari draf dan alat internal, tempat kesalahan murah dan ada orang yang memeriksa hasilnya."
+   ]
+  ],
+  "related": [
+   "integration-automation",
+   "quality-and-audits",
+   "tech-strategy"
+  ]
+ },
+ {
+  "slug": "quality-and-audits",
+  "no": "F",
+  "name": "Kualitas, keamanan, dan audit",
+  "card": "Pemeriksaan independen atas software, proses rilis, dan keamanan Anda, dengan daftar perbaikan berurutan dan pengujian yang menjaganya tetap beres.",
+  "bullets": [
+   "Due diligence teknis",
+   "Tinjauan keamanan dan risiko",
+   "Otomatisasi pengujian dan kualitas rilis"
+  ],
+  "title": "Pemeriksaan independen, secara tertulis.",
+  "meta": "Kualitas, keamanan, dan audit: due diligence teknis, tinjauan keamanan dan risiko, audit performa, dan otomatisasi pengujian. Shiro Labs, Jakarta.",
+  "lede": "Sepasang mata kedua atas apa yang sudah Anda bangun atau akan Anda beli. Kami meninjau kode, proses rilis, dan keamanan, mengurutkan temuan menurut dampak dan upaya, dan bila perlu membangun pengujian otomatis agar masalah tidak kembali.",
+  "facts": [
+   [
+    "Durasi umum",
+    "1 sampai 4 minggu untuk satu tinjauan"
+   ],
+   [
+    "Bekerja dengan",
+    "Pendiri, investor, dan kepala engineering"
+   ],
+   [
+    "Jadi milik Anda",
+    "Laporan, pengujian, dan daftar perbaikan"
+   ]
+  ],
+  "helps": [
+   [
+    "Investor atau pembeli akan memeriksa teknologinya",
+    "Tinjauan sebelum mereka memberi tahu apa yang akan mereka temukan, selagi masih ada waktu memperbaikinya."
+   ],
+   [
+    "Rilis merusak hal yang tadinya berfungsi",
+    "Tanpa pengujian otomatis, bug yang sama kembali dan setiap rilis butuh pemeriksaan manual."
+   ],
+   [
+    "Sudah lama tidak ada yang memeriksa keamanan",
+    "Kata sandi bersama, tanpa two-factor, dan backup yang belum diuji itu umum dan murah diperbaiki."
+   ],
+   [
+    "Vendor menyerahkan hasil kerja dan Anda tidak tahu seberapa baik",
+    "Tinjauan independen atas kode dan proses pengerjaan memberi Anda fakta sebelum menerimanya."
+   ]
+  ],
+  "does": [
+   [
+    "Due diligence teknis",
+    "Pandangan tertulis atas kode, arsitektur, praktik tim, dan risiko, untuk investor, pembeli, atau dewan Anda sendiri."
+   ],
+   [
+    "Tinjauan keamanan dan risiko",
+    "Akses, rahasia, dependensi, backup, dan penanganan data, diperiksa terhadap praktik baik yang praktis."
+   ],
+   [
+    "Audit performa dan keandalan",
+    "Kecepatan di perangkat nyata, titik kegagalan, dan perilaku di bawah beban, disertai bukti."
+   ],
+   [
+    "Otomatisasi pengujian",
+    "Rangkaian uji end-to-end dan API yang menjaga alur yang merugikan bila rusak."
+   ],
+   [
+    "Gerbang kualitas rilis",
+    "Pemeriksaan yang tepat pada setiap perubahan, hanya memblokir hal yang penting."
+   ],
+   [
+    "Rencana perbaikan",
+    "Setiap temuan diurutkan menurut dampak dan upaya, dengan daftar singkat yang bisa dirilis tim Anda lebih dulu."
+   ]
+  ],
+  "runs": [
+   [
+    "Lingkup",
+    "Kami menyepakati apa yang ditinjau, apa yang di luar batas, dan siapa yang melihat hasilnya."
+   ],
+   [
+    "Tinjau",
+    "Kode, konfigurasi, pipeline, dan wawancara, dikumpulkan menjadi bukti."
+   ],
+   [
+    "Laporan",
+    "Daftar temuan tertulis yang diurutkan menurut dampak dan upaya, dibahas dalam satu sesi."
+   ],
+   [
+    "Perbaiki",
+    "Opsional: kami membangun pengujian dan perbaikannya, atau mendampingi tim Anda mengerjakannya."
+   ]
+  ],
+  "tools": [
+   "Tinjauan kode",
+   "Lighthouse",
+   "axe",
+   "Playwright",
+   "k6",
+   "Pemindai dependensi"
+  ],
+  "faq": [
+   [
+    "Apakah ini audit keamanan formal atau sertifikasi?",
+    "Bukan. Ini tinjauan praktis terhadap praktik baik. Sertifikasi membutuhkan auditor terakreditasi, dan kami bisa membantu Anda mempersiapkannya."
+   ],
+   [
+    "Apakah Anda mencakup kepatuhan hukum, seperti UU PDP?",
+    "Kami bisa menandai celah teknis terhadap persyaratan pelindungan data. Kami bukan firma hukum, jadi pengesahan hukum dilakukan terpisah."
+   ],
+   [
+    "Bisakah Anda meninjau hasil kerja vendor lain?",
+    "Bisa, dan itu hal yang umum. Kami menilainya apa adanya dan melapor kepada Anda."
+   ]
+  ],
+  "related": [
+   "cloud-devops",
+   "custom-software",
+   "ai-adoption"
+  ]
+ }
+]

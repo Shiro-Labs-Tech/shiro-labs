@@ -1,0 +1,188 @@
+[
+ {
+  "id": "plan",
+  "label": "2026 / Strategi teknologi",
+  "title": "Roadmap teknologi",
+  "lede": "Perusahaan yang dipimpin pendirinya dengan selusin alat tanpa rencana, diberi roadmap berbiaya yang disetujui pimpinan dalam satu rapat.",
+  "role": "Konsultasi, roadmap",
+  "time": "4 minggu",
+  "stack": "Lokakarya, model biaya, tinjauan vendor",
+  "metrics": [
+   {
+    "value": "12",
+    "dec": 0,
+    "suffix": "",
+    "label": "alat ditinjau"
+   },
+   {
+    "value": "31",
+    "dec": 0,
+    "suffix": "%",
+    "label": "biaya software tahunan lebih rendah"
+   },
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "",
+    "label": "kuartal pekerjaan, berurutan"
+   }
+  ],
+  "q": "Setiap tim membeli alatnya sendiri. Tidak ada yang bisa mengatakan apa yang dipakai, berapa biayanya, atau apa yang bergantung pada apa, sehingga setiap permintaan baru berubah menjadi perdebatan.",
+  "a": "Kami memetakan apa yang berjalan, siapa yang memakainya, dan berapa biayanya, lalu mengurutkan pilihan menurut dampak dan upaya. Roadmap itu menghentikan empat alat, mempertahankan sisanya, dan menetapkan urutan kerja beserta penanggung jawabnya. Pimpinan menyetujuinya dalam satu rapat."
+ },
+ {
+  "id": "dash",
+  "label": "2025 / Software kustom",
+  "title": "Dasbor armada",
+  "lede": "Layar operasional yang sempit dibangun ulang menjadi antarmuka cepat yang bisa dibaca dispatcher sekilas.",
+  "role": "Front end, design system",
+  "time": "10 minggu",
+  "stack": "React, TypeScript, Canvas",
+  "metrics": [
+   {
+    "value": "38",
+    "dec": 0,
+    "suffix": "%",
+    "label": "keputusan dispatch lebih cepat"
+   },
+   {
+    "value": "1.1",
+    "dec": 1,
+    "suffix": "s",
+    "label": "render terbesar, laptop"
+   },
+   {
+    "value": "98",
+    "dec": 0,
+    "suffix": "",
+    "label": "skor performa Lighthouse"
+   }
+  ],
+  "q": "Dispatcher bekerja dari tabel padat yang butuh beberapa detik untuk dimuat dan menyembunyikan satu angka yang mereka butuhkan. Melatih staf baru memakan waktu berminggu-minggu.",
+  "a": "Kami mewawancarai para dispatcher, memangkas layar menjadi lima angka yang benar-benar mereka pakai, dan membangun ulang grafik di canvas agar tetap cepat dengan ribuan rute. Design system kecil menjaga layar baru tetap konsisten."
+ },
+ {
+  "id": "sync",
+  "label": "2025 / Integrasi",
+  "title": "Sinkronisasi order-to-cash",
+  "lede": "Toko online, ERP, dan alat akuntansi yang selalu berselisih tiap akhir bulan, disatukan dalam satu alur yang merekonsiliasi dirinya sendiri.",
+  "role": "Integrasi, otomatisasi",
+  "time": "7 minggu",
+  "stack": "Node, Postgres, webhook",
+  "metrics": [
+   {
+    "value": "5",
+    "dec": 0,
+    "suffix": "",
+    "label": "hari lebih cepat tutup buku"
+   },
+   {
+    "value": "99.4",
+    "dec": 1,
+    "suffix": "%",
+    "label": "pesanan tersinkron pada percobaan pertama"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "faktur diketik ulang"
+   }
+  ],
+  "q": "Pesanan disalin manual dari toko ke ERP, dan faktur dari ERP ke akuntansi. Tutup buku bulanan memakan seminggu untuk mencari ketidakcocokan.",
+  "a": "Kami menggambar alur yang sebenarnya, menjadikan satu sistem sebagai sumber kebenaran untuk setiap catatan, dan menghubungkannya dengan job yang dicoba ulang dan dicatat lognya. Daftar harian menunjukkan apa pun yang gagal sinkron, sehingga pengecualian ditangani dalam hitungan menit, bukan ditemukan saat tutup buku."
+ },
+ {
+  "id": "status",
+  "label": "2025 / Cloud dan keandalan",
+  "title": "Halaman status",
+  "lede": "Pelanggan mengetahui gangguan dari media sosial. Kami membangun pemantauan dan halaman publik yang memberi tahu mereka lebih dulu.",
+  "role": "Pemantauan, front end",
+  "time": "5 minggu",
+  "stack": "Node, Grafana, Peringatan",
+  "metrics": [
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "mnt",
+    "label": "rata-rata waktu deteksi"
+   },
+   {
+    "value": "99.97",
+    "dec": 2,
+    "suffix": "%",
+    "label": "uptime terukur"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "gangguan yang ditemukan pelanggan"
+   }
+  ],
+  "q": "Tim punya log tetapi tidak punya gambaran jelas tentang kesehatan sistem. Tim dukungan mengetahui insiden dari pelanggan, sering kali satu jam setelah dimulai.",
+  "a": "Kami mendefinisikan arti sehat untuk setiap layanan, menambahkan pemeriksaan dan peringatan yang memanggil orang yang tepat, dan menerbitkan halaman status sederhana yang diberi data oleh pemeriksaan yang sama, sehingga tampilan publik dan internal tidak pernah berbeda."
+ },
+ {
+  "id": "assist",
+  "label": "2026 / Adopsi AI",
+  "title": "Asisten dukungan pelanggan",
+  "lede": "Asisten yang menyusun balasan untuk antrean dukungan, dengan satu orang menyetujui setiap balasan sebelum dikirim.",
+  "role": "Alur kerja AI, evaluasi",
+  "time": "6 minggu",
+  "stack": "API LLM, Python, Postgres",
+  "metrics": [
+   {
+    "value": "41",
+    "dec": 0,
+    "suffix": "%",
+    "label": "waktu per tiket lebih singkat"
+   },
+   {
+    "value": "92",
+    "dec": 0,
+    "suffix": "%",
+    "label": "draf diterima setelah ditinjau"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "balasan terkirim tanpa tinjauan"
+   }
+  ],
+  "q": "Tim dukungan menjawab dua puluh pertanyaan yang sama sepanjang hari. Tim sempat mencoba chatbot dan mematikannya setelah chatbot itu mengarang kebijakan refund.",
+  "a": "Kami memulai dari draf, bukan otonomi: asisten mengusulkan balasan beserta sumber yang dipakainya, lalu agen menyetujui atau menyuntingnya. Kumpulan tiket lama yang nyata memberi skor pada setiap perubahan, dan persentase draf yang diterima adalah satu-satunya angka yang kami lacak."
+ },
+ {
+  "id": "audit",
+  "label": "2024 / Kualitas dan audit",
+  "title": "Tinjauan platform",
+  "lede": "Sebelum putaran pendanaan, tinjauan tertulis atas keamanan, proses rilis, dan keandalan, diurutkan menurut dampak dan upaya.",
+  "role": "Audit, laporan tertulis",
+  "time": "2 minggu",
+  "stack": "Tinjauan kode, pemindai, wawancara",
+  "metrics": [
+   {
+    "value": "14",
+    "dec": 0,
+    "suffix": "",
+    "label": "temuan, berurutan"
+   },
+   {
+    "value": "4",
+    "dec": 0,
+    "suffix": "",
+    "label": "butir berisiko tinggi diperbaiki dalam seminggu"
+   },
+   {
+    "value": "2",
+    "dec": 0,
+    "suffix": "",
+    "label": "minggu dari kickoff hingga laporan tertulis"
+   }
+  ],
+  "q": "Tinjauan teknis dari investor akan datang dan tidak ada orang di dalam perusahaan yang tahu apa yang akan ditemukan. Akses, backup, dan proses rilis belum pernah diperiksa bersamaan.",
+  "a": "Kami meninjau akses, backup, dependensi, dan proses rilis, lalu menulis empat belas temuan dengan perkiraan upaya untuk masing-masing. Tim memperbaiki empat butir berisiko tinggi sebelum tinjauan investor dan merencanakan sisanya."
+ }
+]

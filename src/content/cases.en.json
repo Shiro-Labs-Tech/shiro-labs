@@ -1,0 +1,188 @@
+[
+ {
+  "id": "plan",
+  "label": "2026 / Technology strategy",
+  "title": "Technology roadmap",
+  "lede": "A founder-led company with a dozen tools and no plan, given a costed roadmap that leadership approved in one meeting.",
+  "role": "Advisory, roadmap",
+  "time": "4 weeks",
+  "stack": "Workshops, cost model, vendor review",
+  "metrics": [
+   {
+    "value": "12",
+    "dec": 0,
+    "suffix": "",
+    "label": "tools reviewed"
+   },
+   {
+    "value": "31",
+    "dec": 0,
+    "suffix": "%",
+    "label": "lower yearly software spend"
+   },
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "",
+    "label": "quarters of work, ordered"
+   }
+  ],
+  "q": "Every team had bought its own tools. Nobody could say what was used, what it cost or what depended on what, so each new request turned into an argument.",
+  "a": "We mapped what ran, who used it and what it cost, then ranked the options by effect and effort. The roadmap retired four tools, kept the rest and set an order of work with owners. Leadership approved it in a single meeting."
+ },
+ {
+  "id": "dash",
+  "label": "2025 / Custom software",
+  "title": "Fleet dashboard",
+  "lede": "A cramped operations screen rebuilt as a fast interface that dispatchers can read at a glance.",
+  "role": "Front end, design system",
+  "time": "10 weeks",
+  "stack": "React, TypeScript, Canvas",
+  "metrics": [
+   {
+    "value": "38",
+    "dec": 0,
+    "suffix": "%",
+    "label": "faster dispatch decisions"
+   },
+   {
+    "value": "1.1",
+    "dec": 1,
+    "suffix": "s",
+    "label": "largest paint, laptop"
+   },
+   {
+    "value": "98",
+    "dec": 0,
+    "suffix": "",
+    "label": "Lighthouse performance"
+   }
+  ],
+  "q": "Dispatchers worked from a dense table that took seconds to load and hid the one number they needed. Training new staff took weeks.",
+  "a": "We interviewed the dispatchers, cut the screen down to the five numbers they actually used, and rebuilt the charts on canvas so they stay fast with thousands of routes. A small design system keeps new screens consistent."
+ },
+ {
+  "id": "sync",
+  "label": "2025 / Integration",
+  "title": "Order-to-cash sync",
+  "lede": "A web store, an ERP and an accounting tool that disagreed every month-end, joined into one flow that reconciles itself.",
+  "role": "Integration, automation",
+  "time": "7 weeks",
+  "stack": "Node, Postgres, webhooks",
+  "metrics": [
+   {
+    "value": "5",
+    "dec": 0,
+    "suffix": "",
+    "label": "days faster month-end close"
+   },
+   {
+    "value": "99.4",
+    "dec": 1,
+    "suffix": "%",
+    "label": "orders synced first time"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "re-keyed invoices"
+   }
+  ],
+  "q": "Orders were copied by hand from the store into the ERP, and invoices from the ERP into accounting. Month-end took a week of hunting for mismatches.",
+  "a": "We drew the real flow, made one system the source of truth for each record and connected them with retried, logged jobs. A daily list shows anything that failed to sync, so exceptions are handled in minutes instead of found at month-end."
+ },
+ {
+  "id": "status",
+  "label": "2025 / Cloud and reliability",
+  "title": "Status page",
+  "lede": "Customers learned about outages from social media. We built monitoring and a public page that tells them first.",
+  "role": "Monitoring, front end",
+  "time": "5 weeks",
+  "stack": "Node, Grafana, Alerts",
+  "metrics": [
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "min",
+    "label": "mean time to detect"
+   },
+   {
+    "value": "99.97",
+    "dec": 2,
+    "suffix": "%",
+    "label": "measured uptime"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "outages found by customers"
+   }
+  ],
+  "q": "The team had logs but no clear picture of health. Support heard about incidents from customers, often an hour after they began.",
+  "a": "We defined what healthy means for each service, added checks and alerts that page the right person, and published a plain status page fed by the same checks, so the public view and the internal one never disagree."
+ },
+ {
+  "id": "assist",
+  "label": "2026 / AI adoption",
+  "title": "Support assistant",
+  "lede": "An assistant that drafts replies for a support queue, with a person approving every one before it is sent.",
+  "role": "AI workflow, evaluation",
+  "time": "6 weeks",
+  "stack": "LLM API, Python, Postgres",
+  "metrics": [
+   {
+    "value": "41",
+    "dec": 0,
+    "suffix": "%",
+    "label": "less time per ticket"
+   },
+   {
+    "value": "92",
+    "dec": 0,
+    "suffix": "%",
+    "label": "drafts accepted after review"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "replies sent unreviewed"
+   }
+  ],
+  "q": "Support answered the same twenty questions all day. The team had tried a chatbot and switched it off after it invented a refund policy.",
+  "a": "We started with drafts, not autonomy: the assistant proposes a reply with the sources it used, and an agent approves or edits it. A set of real past tickets scores every change, and the share of drafts accepted is the one number we track."
+ },
+ {
+  "id": "audit",
+  "label": "2024 / Quality and audits",
+  "title": "Platform review",
+  "lede": "Before a funding round, a written review of security, delivery and reliability, ranked by effect and effort.",
+  "role": "Audit, written report",
+  "time": "2 weeks",
+  "stack": "Code review, scanners, interviews",
+  "metrics": [
+   {
+    "value": "14",
+    "dec": 0,
+    "suffix": "",
+    "label": "findings, ranked"
+   },
+   {
+    "value": "4",
+    "dec": 0,
+    "suffix": "",
+    "label": "high-risk items fixed in a week"
+   },
+   {
+    "value": "2",
+    "dec": 0,
+    "suffix": "",
+    "label": "weeks from kickoff to written report"
+   }
+  ],
+  "q": "An investor's technical review was coming and nobody inside the company knew what it would find. Access, backups and delivery had never been checked together.",
+  "a": "We reviewed access, backups, dependencies and the release process, and wrote up fourteen findings with an estimated effort for each. The team fixed the four high-risk items before the investor's review and planned the rest."
+ }
+]
