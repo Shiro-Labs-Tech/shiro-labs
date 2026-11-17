@@ -3,14 +3,19 @@ import { useT } from '../i18n';
 import { gsap, rt, pad, introDone } from '../folio/runtime';
 
 /* Fills the block grid and returns the pieces both the first-load loader and the page transition animate. */
-export function loaderParts(el: HTMLElement) {
-  const grid = el.querySelector<HTMLElement>('.loader-grid')!, count = el.querySelector<HTMLElement>('.loader-count')!,
-    lg = el.querySelector('.loader-glyph use')!, mid = el.querySelector('.loader-mid')!, inner = el.querySelector('.loader-inner')!;
+export function fillGrid(el: HTMLElement) {
+  const grid = el.querySelector<HTMLElement>('.loader-grid')!;
   const small = window.innerWidth < 700, cols = small ? 6 : 12, rows = small ? 10 : 7;
   grid.style.setProperty('--c', String(cols)); grid.style.setProperty('--r', String(rows));
   const blocks: HTMLDivElement[] = [];
   for (let i = 0; i < cols * rows; i++) { const b = document.createElement('div'); grid.appendChild(b); blocks.push(b); }
   el.style.background = 'transparent';
+  return blocks;
+}
+
+export function loaderParts(el: HTMLElement) {
+  const blocks = fillGrid(el), count = el.querySelector<HTMLElement>('.loader-count')!,
+    lg = el.querySelector('.loader-glyph use')!, mid = el.querySelector('.loader-mid')!, inner = el.querySelector('.loader-inner')!;
   return { blocks, count, lg, mid, inner };
 }
 
