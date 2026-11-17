@@ -39,14 +39,18 @@ function frame() {
 }
 
 /* ---------- Intro: the loader calls introDone, other modules wait on it ---------- */
-const intro = { done: false, cbs: [] as (() => void)[] };
+const intro = { done: false, held: false, cbs: [] as (() => void)[] };
 export function onIntro(fn: () => void) { if (intro.done) fn(); else intro.cbs.push(fn); }
 export function introDone() {
+  intro.held = false;
   if (intro.done) return;
   intro.done = true;
   intro.cbs.splice(0).forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
 }
 export const isIntroDone = () => intro.done;
+/* A page transition re-arms the intro: the new page waits for the overlay to call introDone. */
+export function holdIntro() { intro.done = false; intro.held = true; }
+export const isIntroHeld = () => intro.held;
 
 /* Called once from the app entry in the browser. */
 export function startRuntime() {
