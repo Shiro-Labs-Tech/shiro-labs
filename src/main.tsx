@@ -1,6 +1,7 @@
 import './styles/styles.css';
 import './styles/shots.css';
 import './styles/site.css';
+import './styles/demo.css';
 import { hydrateRoot, createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import App from './App';

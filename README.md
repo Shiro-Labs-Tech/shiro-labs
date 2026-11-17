@@ -23,6 +23,9 @@ Node 22 or newer.
 - `public/`: favicon, robots.txt, `lang.js` (applies a saved language choice before first paint).
 - `vercel.json`: build settings, clean URLs, redirects, security headers (CSP allows only self and Google Fonts, no inline styles).
 
+## Live demo
+`/demo/fleet` (and `/id/demo/fleet`) is a working fleet dashboard built on invented data: `src/demo/fleetSim.ts` (seeded simulation), `src/demo/FleetMap.tsx` (canvas map, includes the 5,000 route stress test), `src/pages/FleetDemo.tsx` (screen), `src/styles/demo.css`. It is linked from the Fleet dashboard case file. Everything runs in the browser.
+
 ## Add a service
 Add an entry to `services.en.json` and `services.id.json` (same slug). The route, landing card and prerendered page follow.
 
