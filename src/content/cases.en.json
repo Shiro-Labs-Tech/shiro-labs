@@ -1,5 +1,36 @@
 [
  {
+  "id": "gym",
+  "label": "2026 / Landing pages",
+  "title": "Gym landing page",
+  "lede": "A concept landing page for a gym in Surabaya, built to turn a first visit into a free-week sign-up.",
+  "role": "Design, copy, build",
+  "time": "Self-initiated concept",
+  "stack": "HTML, CSS, JavaScript",
+  "metrics": [
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "",
+    "label": "languages on one page"
+   },
+   {
+    "value": "4",
+    "dec": 0,
+    "suffix": "",
+    "label": "requests on first load"
+   },
+   {
+    "value": "32",
+    "dec": 0,
+    "suffix": " KB",
+    "label": "of HTML, no framework"
+   }
+  ],
+  "q": "Most gym sites are a brochure with a contact form. Visitors have to hunt for class times, prices and the nearest club, and many leave before they find them. We set ourselves one goal: get a visitor from the first screen to a free-week sign-up in a few taps.",
+  "a": "The page leads with the offer, then answers what people ask before they join: when classes run, where the clubs are, what it costs and what to bring. Sign-up opens a WhatsApp chat, which most customers in Indonesia already use. It reads in English, Bahasa Indonesia and Japanese, and it is one light page that loads in four requests."
+ },
+ {
   "id": "plan",
   "label": "2026 / Technology strategy",
   "title": "Technology roadmap",

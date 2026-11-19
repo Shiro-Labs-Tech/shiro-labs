@@ -32,9 +32,16 @@ export default function CaseFile({ c, i, n }: { c: Case; i: number; n: number })
         <div className="case-main">
           <div className="case-stage"></div>
           <div className="case-copy" data-in>
-            <p className="mono case-tag">{t('Sample case file. Replace with a real engagement.')}</p>
+            <p className="mono case-tag">{c.id === 'gym' ? t('Concept project. A live site, not a client engagement.') : t('Sample case file. Replace with a real engagement.')}</p>
             <h3>{t('The question')}</h3><p>{c.q}</p>
             <h3>{t('What we found and did')}</h3><p>{c.a}</p>
+            {c.id === 'gym' && (
+              <div className="case-demo">
+                <p className="mono case-tag">{t('Live site')}</p>
+                <p>{t('See the whole page, in three languages. It is a concept, not a real business.')}</p>
+                <a className="pill pill-solid" href="https://gym.shiro-labs.tech" target="_blank" rel="noopener noreferrer">{t('Open the live site')}</a>
+              </div>
+            )}
             {c.id === 'dash' && (
               <div className="case-demo">
                 <p className="mono case-tag">{t('Live demo')}</p>
