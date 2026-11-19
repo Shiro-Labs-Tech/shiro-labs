@@ -151,8 +151,12 @@
 .abt .go { background: #0f8f6a; border-color: #0f8f6a; color: #fff; font-weight: 500; }
 
 /* ---------- Shiro Gym: landing page concept (dark, lime) ---------- */
-.s-gym { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; background: #0b0c10; color: #f2f3f5; }
-.gtp { display: flex; align-items: center; gap: 2cqw; padding: 2cqw 3cqw; font-size: 1.7cqw; }
+.s-gym { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; background: radial-gradient(ellipse 60% 70% at 72% 52%, #2c3029 0, #15171a 55%, #0b0c10 100%); color: #f2f3f5; }
+.s-gym > * { position: relative; z-index: 1; }
+.s-gym > .gring { position: absolute; z-index: 0; right: -9cqw; top: 3cqw; width: 42cqw; height: 42cqw; fill: none; stroke: #c6ff3d; opacity: .5; }
+.gring circle { stroke-width: .7; }
+.gring .gt { stroke-width: 3; stroke-dasharray: .35 2.2; opacity: .8; }
+.gtp { display: flex; align-items: center; gap: 2cqw; margin: 2cqw 3cqw 0; padding: 1cqw 1.4cqw 1cqw 2cqw; font-size: 1.7cqw; background: #ffffff0f; border: 1px solid #ffffff17; border-radius: 99px; }
 .gtp b { display: inline-flex; align-items: center; gap: 1cqw; font-weight: 800; letter-spacing: .06em; font-size: 1.8cqw; }
 .gtp b i { width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #c6ff3d; }
 .gtp em { font-style: normal; font-family: var(--mono); font-size: 1.4cqw; color: #9a9ea8; margin-left: auto; }
@@ -161,6 +165,8 @@
 .ghe h4 { font-size: 11cqw; line-height: .9; font-weight: 900; letter-spacing: -.02em; text-transform: uppercase; }
 .ghe h4 span { display: block; color: #c6ff3d; }
 .ghe p { font-size: 1.9cqw; color: #c3c6cd; max-width: 46cqw; }
+.gbn { display: flex; gap: 1.6cqw; align-items: center; }
+.gcta.gc2 { background: transparent; color: #f2f3f5; border: 1px solid #ffffff2e; }
 .gcta { justify-self: start; background: #c6ff3d; color: #0b0c10; font-weight: 700; font-size: 1.8cqw; border-radius: 99px; padding: 1.2cqw 2.8cqw; }
 .gbt { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: end; gap: 2.4cqw; padding: 1.4cqw 3cqw 2.4cqw; border-top: 1px solid #ffffff14; }
 .gbt strong { font-size: 5cqw; font-weight: 900; color: #c6ff3d; letter-spacing: -.02em; line-height: 1; }
