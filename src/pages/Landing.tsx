@@ -102,6 +102,15 @@ export default function Landing() {
           </div>
           <div className="work-track" id="work-track" tabIndex={0} role="region" aria-label={t("Case files, scroll horizontally")}>
 
+            <a className="panel" href="#case-gym" data-project="gym" data-cursor={t("View case")} aria-label={`${t("Landing page")}, ${t("open case file")}`}>
+              <p className="mono panel-label">{t("2026 / Landing pages")}</p>
+              <div className="frame-slot"><div className="frame"><div className="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span className="frame-url">gym.shiro-labs.tech</span></div>
+                <div className="shot s-gym" aria-hidden="true"><img src={lang === "id" ? "/work/gym-id.webp" : "/work/gym-en.webp"} width="782" height="447" alt="" loading="lazy" decoding="async" /></div></div></div>
+              <h3>{t("Landing page")}</h3>
+              <p className="panel-role">{t("A free first week, and a page built to get it claimed.")}</p>
+              <p className="tags mono"><span className="tag-sample">{t("Concept")}</span><span>{t("Three languages")}</span><span>{t("No framework")}</span></p>
+            </a>
+
             <a className="panel" href="#case-plan" data-project="plan" data-cursor={t("View case")} aria-label={`${t("Technology roadmap")}, ${t("open case file")}`}>
               <p className="mono panel-label">{t("2026 / Technology strategy")}</p>
               <div className="frame-slot"><div className="frame"><div className="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span className="frame-url">plan.example/roadmap</span></div>
@@ -243,6 +252,7 @@ export default function Landing() {
               <tr><th scope="col">No.</th><th scope="col">{t("Engagement")}</th><th scope="col">{t("Discipline")}</th><th scope="col">{t("Stack")}</th><th scope="col" className="r">{t("Year")}</th></tr>
             </thead>
             <tbody>
+              <tr data-project="gym" data-cursor={t("View case")}><td className="mono">09</td><td className="proj"><a href="#case-gym">{t("Landing page")}</a></td><td>{t("Landing pages")}</td><td className="mono">HTML, CSS, JS</td><td className="mono r">2026</td></tr>
               <tr data-project="assist" data-cursor={t("View case")}><td className="mono">08</td><td className="proj"><a href="#case-assist">{t("Support assistant")}</a></td><td>{t("AI adoption")}</td><td className="mono">LLM API, Python</td><td className="mono r">2026</td></tr>
               <tr data-project="plan" data-cursor={t("View case")}><td className="mono">07</td><td className="proj"><a href="#case-plan">{t("Technology roadmap")}</a></td><td>{t("Strategy")}</td><td className="mono">{t("Workshops, cost model")}</td><td className="mono r">2026</td></tr>
               <tr data-project="sync" data-cursor={t("View case")}><td className="mono">06</td><td className="proj"><a href="#case-sync">{t("Order-to-cash sync")}</a></td><td>{t("Integration")}</td><td className="mono">Node, Postgres</td><td className="mono r">2025</td></tr>

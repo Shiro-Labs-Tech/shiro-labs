@@ -149,3 +149,7 @@
 .abt { display: flex; gap: 1.2cqw; }
 .abt span { font-size: 1.7cqw; border: 1px solid #14201b30; border-radius: 99px; padding: .8cqw 2cqw; }
 .abt .go { background: #0f8f6a; border-color: #0f8f6a; color: #fff; font-weight: 500; }
+
+/* ---------- Landing page sample: a screenshot of the live page ---------- */
+.s-gym { background: #0b0c10; }
+.s-gym img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }

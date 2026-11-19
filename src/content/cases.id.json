@@ -1,5 +1,36 @@
 [
  {
+  "id": "gym",
+  "label": "2026 / Landing page",
+  "title": "Landing page",
+  "lede": "Landing page konsep untuk gym di Surabaya, dibuat agar kunjungan pertama berubah menjadi pendaftaran minggu gratis.",
+  "role": "Desain, naskah, pembuatan",
+  "time": "Konsep inisiatif sendiri",
+  "stack": "HTML, CSS, JavaScript",
+  "metrics": [
+   {
+    "value": "3",
+    "dec": 0,
+    "suffix": "",
+    "label": "bahasa dalam satu halaman"
+   },
+   {
+    "value": "0",
+    "dec": 0,
+    "suffix": "",
+    "label": "skrip eksternal"
+   },
+   {
+    "value": "32",
+    "dec": 0,
+    "suffix": " KB",
+    "label": "HTML, tanpa framework"
+   }
+  ],
+  "q": "Kebanyakan situs gym hanyalah brosur dengan formulir kontak. Pengunjung harus mencari jadwal kelas, harga, dan cabang terdekat, dan banyak yang pergi sebelum menemukannya. Kami menetapkan satu tujuan: membawa pengunjung dari layar pertama ke pendaftaran minggu gratis hanya dalam beberapa ketukan.",
+  "a": "Halaman dibuka dengan penawaran, lalu menjawab hal yang ditanyakan orang sebelum bergabung: kapan kelas berjalan, di mana cabangnya, berapa biayanya, dan apa yang perlu dibawa. Pendaftaran membuka obrolan WhatsApp, yang sudah dipakai sebagian besar pelanggan di Indonesia. Halaman tersedia dalam bahasa Inggris, Indonesia, dan Jepang, dan hanya satu halaman ringan tanpa framework dan tanpa skrip eksternal."
+ },
+ {
   "id": "plan",
   "label": "2026 / Strategi teknologi",
   "title": "Roadmap teknologi",
