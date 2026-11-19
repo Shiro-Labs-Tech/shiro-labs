@@ -105,16 +105,7 @@ export default function Landing() {
             <a className="panel" href="#case-gym" data-project="gym" data-cursor={t("View case")} aria-label={`${t("Landing page")}, ${t("open case file")}`}>
               <p className="mono panel-label">{t("2026 / Landing pages")}</p>
               <div className="frame-slot"><div className="frame"><div className="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span className="frame-url">gym.shiro-labs.tech</span></div>
-                <div className="shot s-gym" aria-hidden="true">
-                  <svg className="gring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><circle className="gt" cx="50" cy="50" r="41"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="10"/></svg>
-                  <div className="gtp"><b><i></i>SHIRO GYM</b><em>{t("Open now")}</em><u>{t("Free week")}</u></div>
-                  <div className="ghe">
-                    <h4>START<span>STRONG.</span></h4>
-                    <p>{t("Small classes, real coaches and a free first week.")}</p>
-                    <div className="gbn"><span className="gcta">{t("Find my first class")}</span><span className="gcta gc2">{t("See the schedule")}</span></div>
-                  </div>
-                  <div className="gbt"><strong>062<small>BPM</small></strong><svg viewBox="0 0 100 20" preserveAspectRatio="none"><polyline pathLength="1" points="0,11 14,11 17,11 19,4 22,17 25,11 44,11 47,11 49,2 52,18 55,11 74,11 77,11 79,5 82,16 85,11 100,11"/></svg></div>
-                </div></div></div>
+                <div className="shot s-gym" aria-hidden="true"><img src={lang === "id" ? "/work/gym-id.webp" : "/work/gym-en.webp"} width="782" height="447" alt="" loading="lazy" decoding="async" /></div></div></div>
               <h3>{t("Landing page")}</h3>
               <p className="panel-role">{t("A free first week, and a page built to get it claimed.")}</p>
               <p className="tags mono"><span className="tag-sample">{t("Concept")}</span><span>{t("Three languages")}</span><span>{t("No framework")}</span></p>
